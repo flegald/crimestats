@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+<title>Crime Stats</title>
+
+</head>
+
+<body>
+
+	<h1>US Crime Stats</h1>
+	<h3>Crime numbers from 1960 - 2015 in the USA</h3>
+	<select>
+		<option value='none'>--year--</option>
+		{% for i in years %}
+			<option value="{{i}}">{{i}}</option>
+		{% endfor %}
+	</select>
+	
+
+</body>
+
+</html>
