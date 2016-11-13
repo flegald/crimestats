@@ -16,8 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from year.views import home_page
+from crime_api.views import single_year_view
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', home_page)
+    url(r'^$', home_page),
+
+    #API
+    url(r'^year/(?P<year>[0-9]+)/$', single_year_view, name='send_year'), 
 ]
